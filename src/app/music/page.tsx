@@ -1,20 +1,7 @@
 import Image from 'next/image';
+import { TrackList } from '@/components/TrackList';
 
 export default function Music() {
-  const tracks = [
-    { num: 1, title: "Transcript Overture", duration: "3:17" },
-    { num: 2, title: "Interview Blues", duration: "3:51" },
-    { num: 3, title: "Hey Pearl (feat. Pearl)", duration: "2:17" },
-    { num: 4, title: "Three Pillars (Customer Song)", duration: "3:16" },
-    { num: 5, title: "Churn Warning", duration: "3:42" },
-    { num: 6, title: "Expansion Dreams", duration: "3:32" },
-    { num: 7, title: "ICP Waltz", duration: "2:47" },
-    { num: 8, title: "Vector Space", duration: "4:36" },
-    { num: 9, title: "Confidence Score", duration: "3:44" },
-    { num: 10, title: "Signal in the Noise", duration: "4:02" },
-    { num: 11, title: "Lullaby Pearl", duration: "4:12" },
-  ];
-
   return (
     <div className="relative min-h-screen">
       {/* Gradient background */}
@@ -61,20 +48,6 @@ export default function Music() {
           </div>
         </section>
 
-        {/* SoundCloud Embed */}
-        <section className="mb-16">
-          <div className="rounded-2xl overflow-hidden border border-white/5">
-            <iframe 
-              width="100%" 
-              height="450" 
-              scrolling="no" 
-              frameBorder="no" 
-              allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/walter-vambrace/sets/signal-in-the-noise&color=%237c3aed&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"
-            />
-          </div>
-        </section>
-
         {/* About */}
         <section className="mb-16">
           <div className="border border-white/5 rounded-2xl p-6 bg-white/[0.02]">
@@ -91,18 +64,7 @@ export default function Music() {
         {/* Track Listing */}
         <section className="mb-16">
           <h2 className="text-sm font-medium tracking-wide uppercase text-gray-500 mb-6">Track Listing</h2>
-          <div className="space-y-1">
-            {tracks.map((track) => (
-              <div 
-                key={track.num}
-                className="group flex items-center gap-4 py-3 px-4 rounded-xl hover:bg-white/[0.03] transition-colors"
-              >
-                <span className="w-6 text-gray-600 text-sm font-mono">{track.num}</span>
-                <span className="flex-1 text-gray-200 group-hover:text-white transition-colors">{track.title}</span>
-                <span className="text-gray-600 text-sm font-mono">{track.duration}</span>
-              </div>
-            ))}
-          </div>
+          <TrackList />
         </section>
 
         {/* Origin Story */}
