@@ -30,6 +30,9 @@ export default function RootLayout({
                 <a href="/newsletter" className="text-gray-400 hover:text-white transition-colors">
                   Newsletter
                 </a>
+                <a href="/music" className="text-gray-400 hover:text-white transition-colors">
+                  Music
+                </a>
                 <a href="/subscribe" className="bg-white text-black px-4 py-2 rounded-md font-medium hover:bg-gray-200 transition-colors">
                   Subscribe
                 </a>
