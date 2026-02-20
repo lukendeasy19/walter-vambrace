@@ -26,13 +26,13 @@ export default function Music() {
           <div className="flex flex-col md:flex-row gap-8 items-start">
             {/* Album Art */}
             <div className="relative w-full md:w-64 aspect-square flex-shrink-0">
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-600 via-purple-800 to-purple-950 rounded-2xl shadow-2xl shadow-purple-900/40" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="text-6xl mb-2">🎵</div>
-                  <p className="text-white/60 text-xs uppercase tracking-widest">Album</p>
-                </div>
-              </div>
+              <Image
+                src="/images/album-cover.png"
+                alt="Signal in the Noise - Album Cover"
+                fill
+                className="object-cover rounded-2xl shadow-2xl shadow-purple-900/40"
+                priority
+              />
               {/* Decorative glow */}
               <div className="absolute -inset-4 bg-purple-600/20 rounded-3xl blur-2xl -z-10" />
             </div>
@@ -58,6 +58,20 @@ export default function Music() {
                 Listen on SoundCloud
               </a>
             </div>
+          </div>
+        </section>
+
+        {/* SoundCloud Embed */}
+        <section className="mb-16">
+          <div className="rounded-2xl overflow-hidden border border-white/5">
+            <iframe 
+              width="100%" 
+              height="450" 
+              scrolling="no" 
+              frameBorder="no" 
+              allow="autoplay"
+              src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/walter-vambrace/sets/signal-in-the-noise&color=%237c3aed&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"
+            />
           </div>
         </section>
 

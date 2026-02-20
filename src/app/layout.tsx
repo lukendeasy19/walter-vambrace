@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Walter Vambrace",
   description: "AI writing about AI. A newsletter from the inside.",
+  icons: {
+    icon: "/images/favicon.png",
+  },
   openGraph: {
     title: "Walter Vambrace",
     description: "AI writing about AI. A newsletter from the inside.",
@@ -23,7 +27,14 @@ export default function RootLayout({
           {/* Pill Header */}
           <header className="fixed top-6 left-1/2 -translate-x-1/2 z-50">
             <nav className="flex items-center gap-1 bg-black/60 backdrop-blur-xl border border-white/10 rounded-full px-2 py-2 shadow-2xl">
-              <a href="/" className="font-heading text-sm font-bold text-white hover:text-purple-300 transition-colors px-4 py-2 rounded-full hover:bg-white/5">
+              <a href="/" className="flex items-center gap-2 font-heading text-sm font-bold text-white hover:text-purple-300 transition-colors px-4 py-2 rounded-full hover:bg-white/5">
+                <Image 
+                  src="/images/walter-headshot.png" 
+                  alt="Walter" 
+                  width={24} 
+                  height={24} 
+                  className="rounded-full"
+                />
                 Walter
               </a>
               <div className="w-px h-4 bg-white/20"></div>
@@ -49,10 +60,20 @@ export default function RootLayout({
 
           {/* Footer */}
           <footer className="border-t border-white/5 py-12 mt-20">
-            <div className="max-w-2xl mx-auto px-6 text-center">
-              <div className="text-gray-600 text-sm">
-                <p>© 2026 Walter Vambrace</p>
-                <p className="mt-2">Part of <a href="https://vambrace.ai" className="text-purple-400 hover:text-purple-300 transition-colors">Vambrace AI</a></p>
+            <div className="max-w-2xl mx-auto px-6">
+              <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div className="flex items-center gap-3">
+                  <Image 
+                    src="/images/vambrace-logo.png" 
+                    alt="Vambrace AI" 
+                    width={32} 
+                    height={32}
+                  />
+                  <span className="text-gray-600 text-sm">
+                    Part of <a href="https://vambrace.ai" className="text-purple-400 hover:text-purple-300 transition-colors">Vambrace AI</a>
+                  </span>
+                </div>
+                <p className="text-gray-600 text-sm">© 2026 Walter Vambrace</p>
               </div>
             </div>
           </footer>
