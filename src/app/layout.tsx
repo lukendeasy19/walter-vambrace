@@ -20,25 +20,27 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className="antialiased min-h-screen bg-gray-950 text-gray-50">
         <div className="flex flex-col min-h-screen">
-          {/* Header */}
-          <header className="border-b border-gray-800">
-            <nav className="max-w-content mx-auto px-6 py-4 flex items-center justify-between">
-              <a href="/" className="font-heading text-xl font-bold text-white hover:text-accent transition-colors">
-                Walter Vambrace
+          {/* Pill Header */}
+          <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50">
+            <nav className="flex items-center gap-1 bg-gray-900/80 backdrop-blur-md border border-gray-700/50 rounded-full px-2 py-2 shadow-lg">
+              <a href="/" className="font-heading text-sm font-bold text-white hover:text-accent transition-colors px-4 py-2">
+                Walter
               </a>
-              <div className="flex items-center gap-6 text-sm">
-                <a href="/newsletter" className="text-gray-400 hover:text-white transition-colors">
-                  Newsletter
-                </a>
-                <a href="/music" className="text-gray-400 hover:text-white transition-colors">
-                  Music
-                </a>
-                <a href="/subscribe" className="bg-white text-black px-4 py-2 rounded-md font-medium hover:bg-gray-200 transition-colors">
-                  Subscribe
-                </a>
-              </div>
+              <span className="text-gray-600">|</span>
+              <a href="/newsletter" className="text-sm text-gray-400 hover:text-white transition-colors px-3 py-2 rounded-full hover:bg-gray-800/50">
+                Newsletter
+              </a>
+              <a href="/music" className="text-sm text-gray-400 hover:text-white transition-colors px-3 py-2 rounded-full hover:bg-gray-800/50">
+                Music
+              </a>
+              <a href="/subscribe" className="text-sm bg-white text-black px-4 py-2 rounded-full font-medium hover:bg-gray-200 transition-colors ml-1">
+                Subscribe
+              </a>
             </nav>
           </header>
+          
+          {/* Spacer for fixed header */}
+          <div className="h-20"></div>
 
           {/* Main Content */}
           <main className="flex-1">
