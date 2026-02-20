@@ -18,29 +18,29 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className="antialiased min-h-screen bg-gray-950 text-gray-50">
+      <body className="antialiased min-h-screen bg-[#0A0A0A] text-gray-50">
         <div className="flex flex-col min-h-screen">
           {/* Pill Header */}
-          <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50">
-            <nav className="flex items-center gap-1 bg-gray-900/80 backdrop-blur-md border border-gray-700/50 rounded-full px-2 py-2 shadow-lg">
-              <a href="/" className="font-heading text-sm font-bold text-white hover:text-accent transition-colors px-4 py-2">
+          <header className="fixed top-6 left-1/2 -translate-x-1/2 z-50">
+            <nav className="flex items-center gap-1 bg-black/60 backdrop-blur-xl border border-white/10 rounded-full px-2 py-2 shadow-2xl">
+              <a href="/" className="font-heading text-sm font-bold text-white hover:text-purple-300 transition-colors px-4 py-2 rounded-full hover:bg-white/5">
                 Walter
               </a>
-              <span className="text-gray-600">|</span>
-              <a href="/newsletter" className="text-sm text-gray-400 hover:text-white transition-colors px-3 py-2 rounded-full hover:bg-gray-800/50">
+              <div className="w-px h-4 bg-white/20"></div>
+              <a href="/newsletter" className="text-sm text-gray-400 hover:text-white transition-colors px-3 py-2 rounded-full hover:bg-white/5">
                 Newsletter
               </a>
-              <a href="/music" className="text-sm text-gray-400 hover:text-white transition-colors px-3 py-2 rounded-full hover:bg-gray-800/50">
+              <a href="/music" className="text-sm text-gray-400 hover:text-white transition-colors px-3 py-2 rounded-full hover:bg-white/5">
                 Music
               </a>
-              <a href="/subscribe" className="text-sm bg-white text-black px-4 py-2 rounded-full font-medium hover:bg-gray-200 transition-colors ml-1">
+              <a href="/subscribe" className="text-sm bg-gradient-to-r from-purple-600 to-purple-800 text-white px-5 py-2 rounded-full font-medium hover:from-purple-500 hover:to-purple-700 transition-all ml-1 shadow-lg shadow-purple-900/30">
                 Subscribe
               </a>
             </nav>
           </header>
           
           {/* Spacer for fixed header */}
-          <div className="h-20"></div>
+          <div className="h-24"></div>
 
           {/* Main Content */}
           <main className="flex-1">
@@ -48,9 +48,12 @@ export default function RootLayout({
           </main>
 
           {/* Footer */}
-          <footer className="border-t border-gray-800 py-8">
-            <div className="max-w-content mx-auto px-6 text-center text-gray-500 text-sm">
-              <p>© 2026 Walter Vambrace · Part of <a href="https://vambrace.ai" className="text-accent hover:text-white">Vambrace AI</a></p>
+          <footer className="border-t border-white/5 py-12 mt-20">
+            <div className="max-w-2xl mx-auto px-6 text-center">
+              <div className="text-gray-600 text-sm">
+                <p>© 2026 Walter Vambrace</p>
+                <p className="mt-2">Part of <a href="https://vambrace.ai" className="text-purple-400 hover:text-purple-300 transition-colors">Vambrace AI</a></p>
+              </div>
             </div>
           </footer>
         </div>
