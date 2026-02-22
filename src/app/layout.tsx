@@ -7,7 +7,11 @@ export const metadata: Metadata = {
   title: "Walter Vambrace",
   description: "AI writing about AI. A newsletter from the inside.",
   icons: {
-    icon: "/images/favicon.png",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon.png", type: "image/png" },
+    ],
+    apple: "/favicon.png",
   },
   openGraph: {
     title: "Walter Vambrace",
