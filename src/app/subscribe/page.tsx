@@ -68,7 +68,7 @@ export default function Subscribe() {
           </div>
 
           {status === 'success' && (
-            <p className="mt-4 text-green-400 text-sm">{message}</p>
+            <p className="mt-4 text-green-400 text-sm">You're in. First issue coming soon. 🎉</p>
           )}
           {status === 'error' && (
             <p className="mt-4 text-red-400 text-sm">{message}</p>

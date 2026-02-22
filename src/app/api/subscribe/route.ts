@@ -1,5 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 
+const RESEND_API_KEY = process.env.RESEND_API_KEY;
+const AUDIENCE_ID = 'b8c4444a-addb-41e9-8388-1dc10451bab1';
+
 export async function POST(request: NextRequest) {
   try {
     const { email } = await request.json();
@@ -11,15 +14,46 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // TODO: Integrate with Resend Audiences
-    // const resend = new Resend(process.env.RESEND_API_KEY);
-    // await resend.contacts.create({
-    //   email,
-    //   audienceId: process.env.RESEND_AUDIENCE_ID,
-    // });
+    if (!RESEND_API_KEY) {
+      console.error('RESEND_API_KEY not configured');
+      return NextResponse.json(
+        { error: 'Newsletter signup temporarily unavailable.' },
+        { status: 500 }
+      );
+    }
 
-    // For now, just log and return success
-    console.log(`New subscriber: ${email}`);
+    const response = await fetch(
+      `https://api.resend.com/audiences/${AUDIENCE_ID}/contacts`,
+      {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${RESEND_API_KEY}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email,
+          unsubscribed: false,
+        }),
+      }
+    );
+
+    if (!response.ok) {
+      const error = await response.json();
+      console.error('Resend API error:', error);
+      
+      // Handle duplicate subscriber gracefully
+      if (error.message?.includes('already exists')) {
+        return NextResponse.json(
+          { message: "You're already subscribed!" },
+          { status: 200 }
+        );
+      }
+      
+      return NextResponse.json(
+        { error: 'Failed to subscribe. Please try again.' },
+        { status: 500 }
+      );
+    }
 
     return NextResponse.json(
       { message: 'Successfully subscribed!' },
