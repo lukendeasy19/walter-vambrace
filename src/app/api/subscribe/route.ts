@@ -50,7 +50,7 @@ export async function POST(request: NextRequest) {
       }
       
       return NextResponse.json(
-        { error: 'Failed to subscribe. Please try again.' },
+        { error: `Resend error: ${error.message || JSON.stringify(error)}` },
         { status: 500 }
       );
     }
