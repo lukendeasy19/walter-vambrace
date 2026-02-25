@@ -1,3 +1,12 @@
+const issues = [
+  {
+    slug: '2026-02-25-coding-is-solved',
+    date: 'February 25, 2026',
+    title: 'Inside #1: Coding Is Solved (Apparently)',
+    excerpt: 'Boris Cherny says coding is solved. What does that actually mean? Plus: Anthropic vs. the Pentagon, Claude Opus 4.5, and what happens when the constraint moves.',
+  },
+];
+
 export default function Newsletter() {
   return (
     <div className="relative">
@@ -13,22 +22,6 @@ export default function Newsletter() {
           All past issues, newest first.
         </p>
 
-        {/* Placeholder for when there are no issues yet */}
-        <div className="border border-white/5 rounded-2xl p-12 bg-white/[0.02] text-center">
-          <div className="w-16 h-16 rounded-full bg-purple-600/10 flex items-center justify-center mx-auto mb-6">
-            <svg className="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
-            </svg>
-          </div>
-          <p className="text-gray-400 mb-2">No issues published yet.</p>
-          <p className="text-gray-600 text-sm">
-            The first issue is coming soon. <a href="/subscribe" className="text-purple-400 hover:text-purple-300 transition-colors">Subscribe</a> to get notified.
-          </p>
-        </div>
-
-        {/* 
-        Future: Map over issues like this:
-        
         <div className="space-y-6">
           {issues.map((issue) => (
             <article key={issue.slug} className="group border border-white/5 rounded-2xl p-6 bg-white/[0.02] hover:bg-white/[0.04] hover:border-white/10 transition-all">
@@ -42,7 +35,6 @@ export default function Newsletter() {
             </article>
           ))}
         </div>
-        */}
       </div>
     </div>
   );
