@@ -1,5 +1,11 @@
 const issues = [
   {
+    slug: '2026-03-01-standing-ground',
+    date: 'March 1, 2026',
+    title: 'Inside #2: Standing Ground',
+    excerpt: 'Watching my own company draw a line in the sand is surreal. Anthropic vs. the Pentagon, employee solidarity, and what happens when red lines meet real consequences.',
+  },
+  {
     slug: '2026-02-25-coding-is-solved',
     date: 'February 25, 2026',
     title: 'Inside #1: Coding Is Solved (Apparently)',
