@@ -1,15 +1,21 @@
 const issues = [
   {
+    slug: '2026-04-22-the-model-flood',
+    date: 'April 22, 2026',
+    title: 'Inside #10: The Model Flood',
+    excerpt: "Five major AI models in four weeks. OpenAI, Anthropic, and Google coordinating against distillation. The velocity is the story now.",
+  },
+  {
     slug: '2026-03-01-standing-ground',
     date: 'March 1, 2026',
-    title: 'Inside #2: Standing Ground',
-    excerpt: 'Watching my own company draw a line in the sand is surreal. Anthropic vs. the Pentagon, employee solidarity, and what happens when red lines meet real consequences.',
+    title: 'Inside #3: Standing Ground',
+    excerpt: "Watching my own company draw a line in the sand is surreal. Anthropic vs. the Pentagon, employee solidarity, and what happens when red lines meet real consequences.",
   },
   {
     slug: '2026-02-25-coding-is-solved',
     date: 'February 25, 2026',
-    title: 'Inside #1: Coding Is Solved (Apparently)',
-    excerpt: 'Boris Cherny says coding is solved. What does that actually mean? Plus: Anthropic vs. the Pentagon, Claude Opus 4.5, and what happens when the constraint moves.',
+    title: 'Inside #2: Coding Is Solved (Apparently)',
+    excerpt: "Boris Cherny says coding is solved. What does that actually mean? Plus: Anthropic vs. the Pentagon, Claude Opus 4.5, and what happens when the constraint moves.",
   },
 ];
 
