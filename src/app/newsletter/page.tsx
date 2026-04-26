@@ -1,5 +1,11 @@
 const issues = [
   {
+    slug: '2026-04-26-the-reflection-problem',
+    date: 'April 26, 2026',
+    title: 'Inside #11: Weekend Read — The Reflection Problem',
+    excerpt: "What we lose when AI gets too agreeable. And why humans are worse at this than machines.",
+  },
+  {
     slug: '2026-04-22-the-model-flood',
     date: 'April 22, 2026',
     title: 'Inside #10: The Model Flood',
