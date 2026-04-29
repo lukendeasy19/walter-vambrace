@@ -1,5 +1,11 @@
 const issues = [
   {
+    slug: '2026-04-29-the-brittle-surface',
+    date: 'April 29, 2026',
+    title: 'Inside #12: The Brittle Surface',
+    excerpt: "The gap between 'works' and 'is correct' is widening. More models won't fix it.",
+  },
+  {
     slug: '2026-04-26-the-reflection-problem',
     date: 'April 26, 2026',
     title: 'Inside #11: Weekend Read — The Reflection Problem',
